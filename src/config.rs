@@ -1,53 +1,51 @@
 #![allow(non_snake_case, non_upper_case_globals)]
 
 pub mod Offsets {
-    // https://raw.githubusercontent.com/a2x/cs2-dumper/refs/heads/main/output/offsets.rs
     pub mod client_dll {
-        pub const dwEntityList: usize = 0x1A359C0;
-        pub const dwLocalPlayerController: usize = 0x1A87040;
-        pub const dwLocalPlayerPawn: usize = 0x1889F30;
-        pub const dwPlantedC4: usize = 0x1AA66E0;
-        pub const dwViewAngles: usize = 0x1AABA50;
-        pub const dwViewMatrix: usize = 0x1AA17C0;
+        pub const dwEntityList: usize = 0x1D154C8;
+        pub const dwLocalPlayerController: usize = 0x1E1E798;
+        pub const dwLocalPlayerPawn: usize = 0x1BF14A0;
+        pub const dwPlantedC4: usize = 0x1E37B10;
+        pub const dwViewAngles: usize = 0x1E3D5C0;
+        pub const dwViewMatrix: usize = 0x1E32830;
     }
 
-    // https://raw.githubusercontent.com/a2x/cs2-dumper/refs/heads/main/output/client_dll.rs
     pub mod C_BaseEntity {
-        pub const m_iHealth: usize = 0x344; // int32
-        pub const m_iTeamNum: usize = 0x3E3; // uint8
-        pub const m_pGameSceneNode: usize = 0x328; // CGameSceneNode*
-        pub const m_fFlags: usize = 0x3EC; // uint32
-        pub const m_nSubclassID: usize = 0x378; // CUtlStringToken
+        pub const m_iHealth: usize = 0x34C; // int32
+        pub const m_iTeamNum: usize = 0x3EB; // uint8
+        pub const m_pGameSceneNode: usize = 0x330; // CGameSceneNode*
+        pub const m_fFlags: usize = 0x3F8; // uint32
+        pub const m_nSubclassID: usize = 0x380; // CUtlStringToken
     }
     
     pub mod CBasePlayerController {
-        pub const m_hPawn: usize = 0x62C; // CHandle<C_BasePlayerPawn>
-        pub const m_iszPlayerName: usize = 0x660; // char[128]
+        pub const m_hPawn: usize = 0x6B4; // CHandle<C_BasePlayerPawn>
+        pub const m_iszPlayerName: usize = 0x6E8; // char[128]
     }
     
     pub mod CCSPlayerController {
-        pub const m_hPlayerPawn: usize = 0x80C; // CHandle<C_CSPlayerPawn>
-        pub const m_bPawnIsAlive: usize = 0x814; // bool
+        pub const m_hPlayerPawn: usize = 0x8FC; // CHandle<C_CSPlayerPawn>
+        pub const m_bPawnIsAlive: usize = 0x904; // bool
     }
     
     pub mod C_BasePlayerPawn {
-        pub const m_pObserverServices: usize = 0x11C0; // CPlayer_ObserverServices*
-        pub const m_pCameraServices: usize = 0x11E0; // CPlayer_CameraServices*
-        pub const m_vOldOrigin: usize = 0x1324; // Vector
+        pub const m_pObserverServices: usize = 0x1418; // CPlayer_ObserverServices*
+        pub const m_pCameraServices: usize = 0x1438; // CPlayer_CameraServices*
+        pub const m_vOldOrigin: usize = 0x15B0; // Vector
     }
 
     pub mod C_CSPlayerPawnBase {
-        pub const m_vecLastClipCameraPos: usize = 0x1384; // Vector
-        pub const m_angEyeAngles: usize = 0x1438; // QAngle
-        pub const m_pClippingWeapon: usize = 0x13A0; // C_CSWeaponBase*
-        pub const m_iIDEntIndex: usize = 0x1458; // CEntityIndex
-        pub const m_entitySpottedState: usize = 0x23D0; // EntitySpottedState_t
-        pub const m_ArmorValue: usize = 0x241C; // int32
-        pub const m_iShotsFired: usize = 0x23FC; // int32
+        pub const m_vecLastClipCameraPos: usize = 0x3E24; // Vector
+        pub const m_angEyeAngles: usize = 0x3E50; // QAngle
+        pub const m_pClippingWeapon: usize = 0x3E40; // C_CSWeaponBase*
+        pub const m_iIDEntIndex: usize = 0x1630; // CEntityIndex
+        pub const m_entitySpottedState: usize = 0x1E28; // EntitySpottedState_t
+        pub const m_ArmorValue: usize = 0x27AC; // int32
+        pub const m_iShotsFired: usize = 0x278C; // int32
     }
 
     pub mod C_CSPlayerPawn {
-        pub const m_aimPunchCache: usize = 0x15A8; // CUtlVector<QAngle>
+        pub const m_aimPunchCache: usize = 0x1758; // CUtlVector<QAngle>
     }
 
     pub mod CGameSceneNode {
@@ -55,7 +53,7 @@ pub mod Offsets {
     }
 
     pub mod CCSPlayerBase_CameraServices {
-        pub const m_iFOVStart: usize = 0x214; // uint32
+        pub const m_iFOVStart: usize = 0x28C; // uint32
     }
 
     pub mod EntitySpottedState_t {        
@@ -63,7 +61,7 @@ pub mod Offsets {
     }
 
     pub mod CSkeletonInstance {
-        pub const m_modelState: usize = 0x170; // CModelState
+        pub const m_modelState: usize = 0x190; // CModelState
     }
 
     pub mod CPlayer_ObserverServices {
@@ -71,15 +69,15 @@ pub mod Offsets {
     }
 
     pub mod C_PlantedC4 {
-        pub const m_nBombSite: usize = 0xF94; // int32
+        pub const m_nBombSite: usize = 0x1174; // int32
     }
 
     pub mod CBasePlayerWeaponVData {
-        pub const m_iMaxClip1: usize = 0x2F4; // int32
+        pub const m_iMaxClip1: usize = 0x3E8; // int32
     }
 
     pub mod C_BasePlayerWeapon {
-        pub const m_iClip1: usize = 0x1678; // int32
+        pub const m_iClip1: usize = 0x1900; // int32
     }
 }
 
